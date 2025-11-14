@@ -1,0 +1,2 @@
+# Kino-bot
+Birinchi botim
