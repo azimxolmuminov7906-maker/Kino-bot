@@ -9,9 +9,9 @@ ADMIN_ID = 7357301935  # bu yerga o'z Telegram ID'ingni yoz
 
 # Obuna bo'lishi shart bo'lgan kanallar ID'lari
 KANALLAR = [
-    "@mutifilmku",
-    "@dunyo_kinolari_bor",
-    "@Dunyo_kinolari_borbot"
+    "-1002659417189",
+    "-1002873167951",
+    "-1002373408190"
 ]
 
 # Kino bazasi (faqat admin o'zgartira oladi)
