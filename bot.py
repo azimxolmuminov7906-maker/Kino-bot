@@ -106,6 +106,21 @@ def save_kino(message, code):
     bot.reply_to(message, f"{code} kodi uchun kino saqlandi! 🎬")
 
 # -------- FOYDALANUVCHI KOD YUBORSa --------
+@bot.message_handler(commands=['delete'])
+def delete_kino(message):
+    if message.from_user.id != ADMIN_ID:
+        return bot.reply_to(message, "❌ Bu buyruq faqat admin uchun!")
+
+    try:
+        code = message.text.split()[1]
+    except:
+        return bot.reply_to(message, "❗ Kino kodini kiriting. Masalan: /delete 5")
+
+    if code in KINOLAR:
+        del KINOLAR[code]
+        bot.reply_to(message, f"🗑 {code} raqamli kino o‘chirildi!")
+    else:
+        bot.reply_to(message, "❗ Bunday kino kodi topilmadi!")
 
 @bot.message_handler(content_types=['text'])
 def kino_ber(message):
